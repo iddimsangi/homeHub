@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'property_search_screen.dart'; // Import the PropertySearchScreen
+// TODO: Create property_search_screen.dart
 
 class EstimateBudgetScreen extends StatelessWidget {
   final TextEditingController budgetController = TextEditingController();
@@ -33,7 +33,8 @@ class EstimateBudgetScreen extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Enter your budget (e.g., \$500,000)',
                 border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.monetization_on), // Use a default icon for now
+                prefixIcon:
+                    Icon(Icons.monetization_on), // Use a default icon for now
               ),
               keyboardType: TextInputType.number, // Allow numeric input
             ),
@@ -44,14 +45,17 @@ class EstimateBudgetScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // Handle Continue button action
-                    double? budget = double.tryParse(budgetController.text.replaceAll(',', '').replaceAll('\$', '')); // Parse the budget
+                    double? budget = double.tryParse(budgetController.text
+                        .replaceAll(',', '')
+                        .replaceAll('\$', '')); // Parse the budget
                     if (budget != null) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PropertySearchScreen(location: 'Selected Location', budget: budget), // Pass the budget
-                        ),
-                      );
+                      // TODO: Navigate to property search screen
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => PropertySearchScreen(location: 'Selected Location', budget: budget),
+                      //   ),
+                      // );
                     } else {
                       // Handle invalid input
                       ScaffoldMessenger.of(context).showSnackBar(

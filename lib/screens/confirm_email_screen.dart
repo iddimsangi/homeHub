@@ -49,8 +49,8 @@ class ConfirmEmailScreen extends StatelessWidget {
                   // Handle sending the OTP
                   String email = emailController.text;
                   if (isValidEmail(email)) {
-                    bool success = await ApiService().sendOTP(email);
-                    if (success) {
+                    final result = await ApiService().sendOTP(email);
+                    if (result['success'] == true) {
                       // Navigate to OTP verification screen
                     } else {
                       // Show error message

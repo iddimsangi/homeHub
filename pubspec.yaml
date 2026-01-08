@@ -1,7 +1,7 @@
 name: panga
-description: "A Flutter project for managing properties and listings."
+description: "Home Hub - Tanzania's Local Housing Platform. Find your dream home locally, simply, affordably."
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -11,8 +11,46 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # UI & Design
   cupertino_icons: ^1.0.8
-  google_fonts: ^2.1.0 # Keeping only Google Fonts dependency
+  google_fonts: ^2.3.3
+
+  # State Management (to be added)
+  # provider: ^6.1.1
+
+  # Network & API
+  http: ^0.13.6
+
+  # Local Storage
+  shared_preferences: ^2.2.2
+
+  # Location Services (for future map integration)
+  # geolocator: ^10.1.0
+  # geocoding: ^2.1.1
+
+  # Maps (for future integration)
+  # google_maps_flutter: ^2.5.0
+  # flutter_map: ^6.1.0
+
+  # URL Launcher (for external app integration)
+  # url_launcher: ^6.2.2
+
+  # Image Handling
+  # cached_network_image: ^3.3.0
+
+  # Internationalization
+  # flutter_localizations:
+  #   sdk: flutter
+  # intl: ^0.18.1
+
+  # Firebase (for notifications - Phase 2)
+  # firebase_core: ^2.24.0
+  # firebase_messaging: ^14.7.6
+
+  # Authentication (for social login)
+  # google_sign_in: ^6.1.6
+  # flutter_facebook_auth: ^6.0.3
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +59,21 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  # Assets
   assets:
     - assets/
+    - assets/panga_logo.png
+    - assets/Illustration.png
+    - assets/property.png
     - assets/facebook.png
+    - assets/google.png
+    - assets/apple.png
+
+  # Fonts (if using custom fonts)
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: fonts/CustomFont-Regular.ttf
+  #       - asset: fonts/CustomFont-Bold.ttf
+  #         weight: 700
